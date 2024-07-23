@@ -1,0 +1,16 @@
+# Ajuste conforme a sua necessidade
+version: '3.8'
+
+services:
+  db:
+    image: # imagem desejada EX: mysql:latest
+    container_name: # nome container EX: bd-cursos-online
+    networks:
+      my_ipvlan_wifi_network: # nome da rede EX: my_ipvlan_wifi_network
+        ipv4_address: 192.168.0.240 # IP desejado para o container
+
+networks:
+  my_ipvlan_wifi_network:
+    external: true
+    name: "my_ipvlan_wifi_network"
+

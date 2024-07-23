@@ -16,9 +16,9 @@ Este comando cria uma rede Docker utilizando o driver `ipvlan`. Aqui está uma e
 - `docker network create`: Este comando é usado para criar uma nova rede no Docker.
 - `d ipvlan`: Especifica que o driver de rede a ser usado é `ipvlan`. O `ipvlan` permite que os contêineres recebam endereços IP diretamente da rede física, tornando-os diretamente acessíveis na rede local.
 - `-subnet=192.168.0.0/24`: Define a sub-rede para a rede Docker, neste caso, `192.168.0.0/24`. Isso significa que os endereços IP variam de `192.168.0.1` a `192.168.0.254`.
-- `-gateway=192.168.0.1`: Define o gateway para a rede Docker, que será `192.168.0.1`.
-- `o parent=wlp2s0`: Especifica a interface de rede física pai que o Docker usará. Neste caso, `wlp2s0` é o nome da interface de rede Wi-Fi.
-- `my_ipvlan_wifi_network`: Este é o nome atribuído à rede Docker criada.
+- `-gateway=192.168.0.1`: Define o gateway para a rede Docker, que será `192.168.0.1`(IP do meu roteador wifi).
+- `o parent=wlp2s0`: Especifica a interface de rede física pai que o Docker usará. Neste caso, `wlp2s0` é o nome da interface de rede Wi-Fi do meu laptop, você deve alterar de acordo com suas interfaces.
+- `my_ipvlan_wifi_network`: Este é o nome atribuído à rede Docker criada, mude para oq desejar porem deve sempre usar esse nome.
 
 Este comando cria uma rede Docker chamada `my_ipvlan_wifi_network` que utiliza a interface Wi-Fi `wlp2s0` e permite que os contêineres conectados a esta rede usem endereços IP da sub-rede `192.168.0.0/24`.
 

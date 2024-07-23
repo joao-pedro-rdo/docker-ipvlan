@@ -13,6 +13,7 @@ Neste repositório, você encontrará instruções detalhadas para:
 2. **Configurar Docker Compose**: Utilize um arquivo `docker-compose.yml` para definir e iniciar contêineres na rede Docker configurada. O Docker Compose simplifica o processo de configuração e gerenciamento de contêineres, permitindo que você defina serviços e suas configurações em um único arquivo.
 
 
+## Criando a rede `ipvlan` no docker
 ⚠️ Certifique-se de alterar os IP para sua rede local de maneira correta
 
 ```bash
@@ -48,14 +49,14 @@ docker network inspect my_ipvlan_wifi_network
 
 ---
 
-### Usando um docker compose para levantar um container na rede criada
+## Usando docker compose para levantar um container na rede criada
 
 Você pode conferir o arquivo completo em [docker-compose.yaml](https://github.com/joao-pedro-rdo/docker-ipvlan/blob/main/docker-compose.yml)
 
-Use docker-compose up para iniciar os serviços definidos.
+Use `docker-compose up` para iniciar os serviços definidos.
 
-Contribuição
+## Contribuição
 Contribuições são bem-vindas! Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-Licença
+## Licença
 Este projeto está licenciado sob a Licença MIT.
